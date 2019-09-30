@@ -1,3 +1,5 @@
+package h04;
+
 import javafx.scene.layout.Background;
 
 import java.applet.Applet;
