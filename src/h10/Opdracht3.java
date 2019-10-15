@@ -31,25 +31,40 @@ public class Opdracht3 extends Applet {
             dag = Integer.parseInt( s);
             switch(dag) {
                 case 1:
-                    tekst = "zondag";
+                    tekst = "jan heeft 31 dagen";
                     break;
                 case 2:
-                    tekst = "maandag";
+                    tekst = "feb heeft 28 dagen";
                     break;
                 case 3:
-                    tekst = "dinsdag";
+                    tekst = "mrt heeft 31 dagen";
                     break;
                 case 4:
-                    tekst = "woensdag";
+                    tekst = "april heeft 30 dagen";
                     break;
                 case 5:
-                    tekst = "donderdag";
+                    tekst = "mei heeft 31 dagen";
                     break;
                 case 6:
-                    tekst = "vrijdag";
+                    tekst = "jun heeft 30 dagen";
                     break;
                 case 7:
-                    tekst = "zaterdag";
+                    tekst = "jul heeft 31 dagen";
+                    break;
+                case 8:
+                    tekst = "aug heeft 30 dagen";
+                    break;
+                case 9:
+                    tekst = "sep heeft 31 dagen";
+                    break;
+                case 10:
+                    tekst = "okt heeft 30 dagen";
+                    break;
+                case 11:
+                    tekst = "nov heeft 31 dagen";
+                    break;
+                case 12:
+                    tekst = "dec heeft 30 dagen";
                     break;
                 default:
                     tekst = "U hebt een verkeerd nummer ingetikt ..!";
