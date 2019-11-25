@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Opdracht3 extends Applet {
+public class Opdracht3 extends Applet  {
 
     Button baksteen;
     Button betonblok;
@@ -15,12 +15,22 @@ public class Opdracht3 extends Applet {
     public void init() {
 
         baksteen = new Button("baksteen");
-        baksteen.addActionListener(new baksteenListener());
+        baksteen.addActionListener(new baksteenListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
         add(baksteen);
 
         betonblok = new Button("betonblok");
         add(betonblok);
-        betonblok.addActionListener(new betonblokListener());
+        betonblok.addActionListener(new betonblokListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
 
@@ -59,27 +69,41 @@ public class Opdracht3 extends Applet {
             y1 += height1;
             y2 += height2;
         }
+        int finalX1 = x1;
+        int finalY1 = y1;
+
+
         class baksteenListener implements ActionListener {
 
             public void actionPerformed(ActionEvent e) {
                 g.setColor(Color.red);
-                g.fillRect(x1, y1, width1, height1);
+                g.fillRect(finalX1, finalY1, width1, height1);
                 g.setColor(Color.black);
-                g.drawRect(x1, y1, width1, height1);
+                g.drawRect(finalX1, finalY1, width1, height1);
                 repaint();
             }
         }
+        int finalX = x2;
+        int finalY = y2;
         class betonblokListener implements ActionListener {
 
 
             public void actionPerformed(ActionEvent e) {
                 g.setColor(Color.gray);
-                g.fillRect(x2, y2, width2, height2);
+                g.fillRect(finalX, finalY, width2, height2);
                 g.setColor(Color.black);
-                g.drawRect(x2, y2, width2, height2);
+                g.drawRect(finalX, finalY, width2, height2);
                 repaint();
             }
         }
 
     }
+
+
+    private abstract class baksteenListener implements ActionListener {
+    }
+
+    private abstract class betonblokListener implements ActionListener {
+    }
 }
+
